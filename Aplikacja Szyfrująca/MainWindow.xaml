@@ -26,6 +26,15 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                     <Label FontSize="20" FontWeight="Bold" >Rail Fence</Label>
@@ -60,12 +69,129 @@
                     <TextBox ToolTip="Podaj słowo" Grid.Row="8" Margin="5" Padding="3" Name="MatrixShiftBDecodeInput"  />
                     <TextBox ToolTip="Podaj klucz" Grid.Row="8" Margin="5" Grid.Column="1" Padding="3" Name="MatrixShiftBDecodeKeyInput"  />
                     <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="8" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftBDecodeOutput" />
-                    <Button  Margin="3" Grid.Row="8" Padding="15,5" Grid.Column="3" Click="MatrixShiftBDecode">Zakoduj</Button>
+                    <Button  Margin="3" Grid.Row="8" Padding="15,5" Grid.Column="3" Click="MatrixShiftBDecode">Dekoduj</Button>
 
+                    <Label Grid.Row="9" FontSize="20" FontWeight="Bold" >Przestawienia macierzowe C</Label>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="10" Margin="5" Padding="3" Name="MatrixShiftCEncodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="10" Margin="5" Grid.Column="1" Padding="3" Name="MatrixShiftCEncodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="10" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftCEncodeOutput" />
+                    <Button  Margin="3" Grid.Row="10" Padding="15,5" Grid.Column="3" Click="MatrixShiftCEncode">Zakoduj</Button>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="11" Margin="5" Padding="3" Name="MatrixShiftCDecodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="11" Margin="5" Grid.Column="1" Padding="3" Name="MatrixShiftCDecodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="11" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftCDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="11" Padding="15,5" Grid.Column="3" Click="MatrixShiftCDecode">Dekoduj</Button>
+
+                    <Label Grid.Row="12" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" >Szyfrowanie afiniczne f(x) = (ax + b) mod 26</Label>
+                
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="13" Margin="5" Padding="3" Name="CeasarCipherEncodeInput"  />
+                    <Grid Grid.Row="13" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj a"  Margin="5"  Padding="3" Text="7" Name="CeasarCipherEncodeKey1Input"  />
+                        <TextBox ToolTip="Podaj b"  Margin="5" Grid.Column="1" Text="5" Padding="3" Name="CeasarCipherEncodeKey2Input"  />
+                    </Grid>
+
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="13" Margin="5" Padding="3" Grid.Column="2" Name="CeasarCipherEncodeOutput" />
+                    <Button  Margin="3" Grid.Row="13" Padding="15,5" Grid.Column="3" Click="CeasarCipherEncode">Zakoduj</Button>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="14" Margin="5" Padding="3" Name="CeasarCipherDecodeInput"  />
+                    <Grid Grid.Row="14" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj a"  Margin="5"  Padding="3" Name="CeasarCipherDecodeKey1Input"  Text="7"/>
+                        <TextBox ToolTip="Podaj b"  Margin="5" Grid.Column="1" Padding="3" Name="CeasarCipherDecodeKey2Input" Text="5" />
+                    </Grid>
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="14" Margin="5" Padding="3" Grid.Column="2" Name="CeasarCipherDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="14" Padding="15,5" Grid.Column="3" Click="CeasarCipherDecode">Dekoduj</Button>
+
+                    <Label Grid.Row="15" FontSize="20" FontWeight="Bold" >Szyfrowanie Vigenere'a</Label>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="16" Margin="5" Padding="3" Name="VigenereEncodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="16" Margin="5" Grid.Column="1" Padding="3" Name="VigenereEncodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="16" Margin="5" Padding="3" Grid.Column="2" Name="VigenereEncodeOutput" />
+                    <Button  Margin="3" Grid.Row="16" Padding="15,5" Grid.Column="3" Click="VigenereEncode">Zakoduj</Button>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="17" Margin="5" Padding="3" Name="VigenereDecodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="17" Margin="5" Grid.Column="1" Padding="3" Name="VigenereDecodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="17" Margin="5" Padding="3" Grid.Column="2" Name="VigenereDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="17" Padding="15,5" Grid.Column="3" Click="VigenereDecode">Dekoduj</Button>
                 </Grid>
         </TabItem>
             <TabItem Header="Strumieniowe" >
-                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="20" FontWeight="Bold" >Synchronous Stream Cipher</Label>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="1" Margin="5" Padding="3" Name="SSCEncodeInput"  />
+                    <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj seed"  Margin="5"  Padding="3" Name="SSCSeedEncodeInput"  />
+                        <TextBox ToolTip="Podaj wielomian"  Margin="5" Grid.Column="1" Padding="3" Name="SSCPolynomialEncodeInput"  />
+                    </Grid>
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="1" Margin="5" Padding="3" Grid.Column="3" Name="SSCEncodeOutput" />
+                    <Button Margin="3" Grid.Row="1" Padding="15,5" Grid.Column="4" Click="SSCEncode">Zakoduj</Button>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="2" Margin="5" Padding="3" Name="SSCDecodeInput"  />
+                    <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj seed"  Margin="5"  Padding="3" Name="SSCSeedDecodeInput"  />
+                        <TextBox ToolTip="Podaj wielomian"  Margin="5" Grid.Column="1" Padding="3" Name="SSCPolynomialDecodeInput"  />
+                    </Grid>
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="2" Margin="5" Padding="3" Grid.Column="3" Name="SSCDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="2" Padding="15,5" Grid.Column="4" Click="SSCDecode">Dekoduj</Button>
+
+                    <Label Grid.Row="3" FontSize="20" FontWeight="Bold" >Ciphertext Autokey</Label>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="4" Margin="5" Padding="3" Name="CiphertextAutokeyEncodeInput"  />
+                    <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj seed"  Margin="5"  Padding="3" Name="CiphertextAutokeySeedEncodeInput"  />
+                        <TextBox ToolTip="Podaj wielomian"  Margin="5" Grid.Column="1" Padding="3" Name="CiphertextAutokeyPolynomialEncodeInput"  />
+                    </Grid>
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="4" Margin="5" Padding="3" Grid.Column="3" Name="CiphertextAutokeyEncodeOutput" />
+                    <Button Margin="3" Grid.Row="4" Padding="15,5" Grid.Column="4" Click="CiphertextAutokeyEncode">Zakoduj</Button>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="5" Margin="5" Padding="3" Name="CiphertextAutokeyDecodeInput"  />
+                    <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox ToolTip="Podaj seed"  Margin="5"  Padding="3" Name="CiphertextAutokeySeedDecodeInput"  />
+                        <TextBox ToolTip="Podaj wielomian"  Margin="5" Grid.Column="1" Padding="3" Name="CiphertextAutokeyPolynomialDecodeInput"  />
+                    </Grid>
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="5" Margin="5" Padding="3" Grid.Column="3" Name="CiphertextAutokeyDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="5" Padding="15,5" Grid.Column="4" Click="CiphertextAutokeyDecode">Dekoduj</Button>
+                </Grid>
             </TabItem>
             <TabItem Header="Placeholder" >
                 

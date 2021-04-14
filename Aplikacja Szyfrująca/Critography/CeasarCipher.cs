@@ -8,7 +8,7 @@ namespace Aplikacja_Szyfrująca.Critography
     public class CeasarCipher
     {
         private int N = 26; //ilosc liter w alfabecie
-        private int EULER_N = 12; //ilosc liter w alfabecie
+        private int EULER_N = 12; 
 
         public string Encrypt(string word,int k1, int k0)
         {

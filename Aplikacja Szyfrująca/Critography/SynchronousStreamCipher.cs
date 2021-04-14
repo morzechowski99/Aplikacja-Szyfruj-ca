@@ -35,5 +35,23 @@ namespace Aplikacja_Szyfrująca.Critography
             }
             return result;
         }
+        public string Decrypt(string word)
+        {
+            byte[] wordArray = new byte[word.Length];
+            int i = 0;
+            foreach (var s in word)
+            {
+                wordArray[i] = (byte)(s - 48);
+                i++;
+            }
+
+            string result = "";
+            foreach (var value in wordArray)
+            {
+                byte res = xor(value, generator.GetNextValue());
+                result += (char)(res + 48);
+            }
+            return result;
+        }
     }
 }

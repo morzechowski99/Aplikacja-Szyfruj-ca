@@ -9,6 +9,7 @@ namespace Aplikacja_Szyfrująca.Critography
         public string Encrypt(string word, string key)
         {
             word = word.ToUpper();
+            key = key.ToUpper();
             char[,] matrix = GetMatrix();
             string result = "";
             int idx = 0;
@@ -22,6 +23,7 @@ namespace Aplikacja_Szyfrująca.Critography
         public string Decrypt(string word, string key)
         {
             word = word.ToUpper();
+            key = key.ToUpper();
             char[,] matrix = GetMatrix();
             string result = "";
             int idx = 0;
