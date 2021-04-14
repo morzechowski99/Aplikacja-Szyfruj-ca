@@ -21,7 +21,7 @@ namespace Aplikacja_Szyfrująca
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ICriptographyAlgorithm algorithm;
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace Aplikacja_Szyfrująca
 
         private void RailFenceEncode(object sender, RoutedEventArgs e)
         {
-            algorithm = new RailFence();
+            RailFence algorithm = new RailFence();
             string value = RailFenceEncodeInput.Text;
             int key;
             try
@@ -46,7 +46,7 @@ namespace Aplikacja_Szyfrująca
 
         private void RailFenceDecode(object sender, RoutedEventArgs e)
         {
-            algorithm = new RailFence();
+            RailFence algorithm = new RailFence();
             string value = RailFenceDecodeInput.Text;
             int key;
             try
@@ -59,6 +59,40 @@ namespace Aplikacja_Szyfrująca
                 return;
             }
             RailFenceDecodeOutput.Text = algorithm.Decrypt(value, key);
+        }
+
+        private void MatrixShiftEncode(object sender, RoutedEventArgs e)
+        {
+            MatrixShift algorithm = new MatrixShift();
+            string value = MatrixShiftEncodeInput.Text;
+    
+            MatrixShiftEncodeOutput.Text = algorithm.Encrypt(value);
+        }
+
+        private void MatrixShiftDecode(object sender, RoutedEventArgs e)
+        {
+            MatrixShift algorithm = new MatrixShift();
+            string value = MatrixShiftDecodeInput.Text;
+
+            MatrixShiftDecodeOutput.Text = algorithm.Decrypt(value);
+        }
+
+        private void MatrixShiftBEncode(object sender, RoutedEventArgs e)
+        {
+            MatrixShiftB algorithm = new MatrixShiftB();
+            string value = MatrixShiftBEncodeInput.Text;
+            string key = MatrixShiftBEncodeKeyInput.Text;
+
+            MatrixShiftBEncodeOutput.Text = algorithm.Encrypt(value, key);
+        }
+
+        private void MatrixShiftBDecode(object sender, RoutedEventArgs e)
+        {
+            MatrixShiftB algorithm = new MatrixShiftB();
+            string value = MatrixShiftBDecodeInput.Text;
+            string key = MatrixShiftBDecodeKeyInput.Text;
+
+            MatrixShiftBDecodeOutput.Text = algorithm.Decrypt(value, key);
         }
     }
 }

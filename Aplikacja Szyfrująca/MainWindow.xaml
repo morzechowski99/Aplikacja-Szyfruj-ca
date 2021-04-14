@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja_Szyfrująca"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="768" Width="1024">
     <Grid Margin="10 10 20 10">
         <TabControl>
         <TabItem Header="Przestawieniowe">
@@ -23,34 +23,48 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                     <Label FontSize="20" FontWeight="Bold" >Rail Fence</Label>
                 
                     <TextBox ToolTip="Podaj słowo" Grid.Row="1" Margin="5" Padding="3" Name="RailFenceEncodeInput"  />
-                    <TextBox ToolTip="Podaj wagę" Grid.Row="1" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceEncodeKeyInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="1" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceEncodeKeyInput"  />
                     <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="1" Margin="5" Padding="3" Grid.Column="2" Name="RailFenceEncodeOutput" />
                     <Button Margin="3" Grid.Row="1" Padding="15,5" Grid.Column="3" Click="RailFenceEncode">Zakoduj</Button>
 
                     <TextBox ToolTip="Podaj słowo" Grid.Row="2" Margin="5" Padding="3" Name="RailFenceDecodeInput"  />
-                    <TextBox ToolTip="Podaj wagę" Grid.Row="2" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceDecodeKeyInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="2" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceDecodeKeyInput"  />
                     <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="2" Margin="5" Padding="3" Grid.Column="2" Name="RailFenceDecodeOutput" />
                     <Button  Margin="3" Grid.Row="2" Padding="15,5" Grid.Column="3" Click="RailFenceDecode">Dekoduj</Button>
 
-                    <Label Grid.Row="4" FontSize="20" FontWeight="Bold" >Przestawienia macierzowe</Label>
+                    <Label Grid.Row="3" FontSize="20" FontWeight="Bold" >Przestawienia macierzowe</Label>
 
-                    <!--<TextBox ToolTip="Podaj słowo" Grid.Row="1" Margin="5" Padding="3" Name="RailFenceEncodeInput"  />
-                    <TextBox ToolTip="Podaj wagę" Grid.Row="1" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceEncodeKeyInput"  />
-                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="1" Margin="5" Padding="3" Grid.Column="2" Name="RailFenceEncodeOutput" />
-                    <Button Margin="3" Grid.Row="1" Padding="15,5" Grid.Column="3" Click="RailFenceEncode">Zakoduj</Button>
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="4" Margin="5" Padding="3" Name="MatrixShiftEncodeInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="4" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftEncodeOutput" />
+                    <Button Margin="3" Grid.Row="4" Padding="15,5" Grid.Column="3" Click="MatrixShiftEncode">Zakoduj</Button>
+                    
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="5" Margin="5" Padding="3" Name="MatrixShiftDecodeInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="5" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftDecodeOutput" />
+                    <Button Margin="3" Grid.Row="5" Padding="15,5" Grid.Column="3" Click="MatrixShiftDecode">Dekoduj</Button>
 
-                    <TextBox ToolTip="Podaj słowo" Grid.Row="2" Margin="5" Padding="3" Name="RailFenceDecodeInput"  />
-                    <TextBox ToolTip="Podaj wagę" Grid.Row="2" Margin="5" Grid.Column="1" Padding="3" Name="RailFenceDecodeKeyInput"  />
-                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="2" Margin="5" Padding="3" Grid.Column="2" Name="RailFenceDecodeOutput" />
-                    <Button  Margin="3" Grid.Row="2" Padding="15,5" Grid.Column="3" Click="RailFenceDecode">Dekoduj</Button>-->
+                    <Label Grid.Row="6" FontSize="20" FontWeight="Bold" >Przestawienia macierzowe B</Label>
+
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="7" Margin="5" Padding="3" Name="MatrixShiftBEncodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="7" Margin="5" Grid.Column="1" Padding="3" Name="MatrixShiftBEncodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="7" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftBEncodeOutput" />
+                    <Button  Margin="3" Grid.Row="7" Padding="15,5" Grid.Column="3" Click="MatrixShiftBEncode">Zakoduj</Button>
+                
+                    <TextBox ToolTip="Podaj słowo" Grid.Row="8" Margin="5" Padding="3" Name="MatrixShiftBDecodeInput"  />
+                    <TextBox ToolTip="Podaj klucz" Grid.Row="8" Margin="5" Grid.Column="1" Padding="3" Name="MatrixShiftBDecodeKeyInput"  />
+                    <TextBox ToolTip="Wynik" IsReadOnly="True" Grid.Row="8" Margin="5" Padding="3" Grid.Column="2" Name="MatrixShiftBDecodeOutput" />
+                    <Button  Margin="3" Grid.Row="8" Padding="15,5" Grid.Column="3" Click="MatrixShiftBDecode">Zakoduj</Button>
+
                 </Grid>
         </TabItem>
-            <TabItem Header="Placeholder" >
+            <TabItem Header="Strumieniowe" >
                 
             </TabItem>
             <TabItem Header="Placeholder" >
